@@ -1,0 +1,34 @@
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
+import prettier from "eslint-config-prettier";
+
+const config = [
+  {
+    ignores: [
+      "node_modules/**",
+      ".next/**",
+      "out/**",
+      "reference/**",
+      "playwright-report/**",
+      "test-results/**",
+      "next-env.d.ts",
+    ],
+  },
+  ...nextVitals,
+  ...nextTs,
+  prettier,
+  {
+    rules: {
+      "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/consistent-type-imports": ["error", { prefer: "type-imports" }],
+      "no-console": ["error", { allow: ["warn", "error"] }],
+    },
+  },
+  {
+    // Operator scripts may print to stdout.
+    files: ["scripts/**"],
+    rules: { "no-console": "off" },
+  },
+];
+
+export default config;
