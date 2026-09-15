@@ -27,7 +27,7 @@ export const LINKS = {
   geckoToken: (ca: string) => `https://www.geckoterminal.com/robinhood/tokens/${ca}`,
   /** EIP-681 payment link */
   donate: (addr: string) => `ethereum:${addr}@${ROBINHOOD_CHAIN_ID}`,
-  repo: "https://github.com/gabrielsartori027/schmeckle-wars",
+  repo: "https://github.com/gabrielsartori027/token",
   bridge: "https://portal.arbitrum.io/bridge?destinationChain=robinhood-chain&sourceChain=ethereum",
   safeApp: "https://app.safe.global",
   robinhoodDocs: "https://docs.robinhood.com/chain",
