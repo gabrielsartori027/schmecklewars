@@ -75,8 +75,11 @@ export const env = createEnv({
     ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
     ANTHROPIC_MODEL: process.env.ANTHROPIC_MODEL,
     ANTHROPIC_WEB_SEARCH_MAX_USES: process.env.ANTHROPIC_WEB_SEARCH_MAX_USES,
-    UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
-    UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
+    // Vercel's Upstash/Storage integration injects KV_REST_API_* instead of UPSTASH_REDIS_REST_*.
+    // Accept both so provisioning from the Vercel dashboard works with no manual copy-paste.
+    UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL,
+    UPSTASH_REDIS_REST_TOKEN:
+      process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN,
     CRON_SECRET: process.env.CRON_SECRET,
     RPC_URL: process.env.RPC_URL,
     ETH_MAINNET_RPC_URL: process.env.ETH_MAINNET_RPC_URL,
