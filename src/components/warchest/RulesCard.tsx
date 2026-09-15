@@ -1,7 +1,7 @@
 import {
   EMERGENCY_HN,
   EMERGENCY_HOURS,
-  EPOCH_DAYS_DEFAULT,
+  EPOCH_LABEL,
   MIN_DROP_USD,
   RULES_VERSION,
   SPLIT,
@@ -11,7 +11,7 @@ import { LINKS } from "@/config/token";
 import { Card, SectionTitle } from "@/components/ui/Card";
 
 const RULES = [
-  `Epochs last ${EPOCH_DAYS_DEFAULT} days from the launch timestamp (GENESIS_TS), on UTC boundaries.`,
+  `Epochs last ${EPOCH_LABEL} from the launch timestamp (GENESIS_TS), on UTC boundaries.`,
   `Inflows of an epoch are split ${SPLIT.aid * 100} % aid · ${SPLIT.ops * 100} % ops · ${SPLIT.reserve * 100} % reserve (USD value at the time of each transaction).`,
   "The aid pool is divided between theaters by their time-weighted heat share over the epoch — the same heat you see on the map.",
   `Only theaters with at least one Confirmed partner are eligible; the share of ineligible theaters is redistributed. Every eligible theater gets at least ${THEATER_FLOOR * 100} %.`,
