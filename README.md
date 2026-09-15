@@ -8,7 +8,7 @@ Next.js 16 (App Router, Turbopack) · React 19 · TypeScript strict · Tailwind 
 The **WW3 Probability Index** is the engine: real military news from the last 24 h becomes attacks
 between nations (Rick and Morty personas), animated on a world map; every attack moves stats, XP,
 theater heat and the index. The **War Chest** is the theme: the creator share of `$CHMCO` trading
-fees flows into a public Safe multisig on Robinhood Chain, and every 14 days the index decides how
+fees flows into a public Safe multisig on Robinhood Chain, and every day the index decides how
 the aid pool is split between neutral humanitarian organizations. Index = cause, War Chest = consequence.
 
 The world is **canonical**: a server cron ingests the news into an append-only event log and every
@@ -117,7 +117,7 @@ prefer another token. Confirm the contract on Blockscout before launch.
 
 ## Vault operation (Phase 1 preview — not code of the site)
 
-- Epoch close (every 14 days, UTC): open `/warchest`, read the Allocation Snapshot (Phase 1 publishes
+- Epoch close (every 1 day, UTC): open `/warchest`, read the Allocation Snapshot (Phase 1 publishes
   the JSON and its SHA-256 through a 0-ETH self-transaction from `PUBLISHER_ADDRESS`; that key is a
   separate hot wallet holding ~0.01 ETH — **never** a Safe owner key, never the creator key).
 - Create the Safe transactions: bridge out of Robinhood Chain (canonical bridge withdrawal takes
