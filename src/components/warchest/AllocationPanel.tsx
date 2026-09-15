@@ -1,5 +1,6 @@
 "use client";
 
+import { EPOCH_DAYS_DEFAULT } from "@/config/epochs";
 import { useProjected } from "@/hooks/useProjected";
 import { fmtDateTimeUtc } from "@/lib/format";
 import { THEATERS, type Theater } from "@/lib/domain/types";
@@ -75,8 +76,8 @@ export function EpochCard() {
         </div>
       ) : (
         <p className="text-sm text-fg-secondary">
-          Epoch 1 starts at launch (GENESIS_TS) and closes 14 days later, at a UTC boundary. The
-          timeline of past epochs, snapshots and hashes lands in Phase 1.
+          Epoch 1 starts at launch (GENESIS_TS) and closes {EPOCH_DAYS_DEFAULT} days later, at a UTC
+          boundary. The timeline of past epochs, snapshots and hashes lands in Phase 1.
         </p>
       )}
     </Card>
