@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { EPOCH_DAYS_DEFAULT } from "@/config/epochs";
+import { EPOCH_EVERY } from "@/config/epochs";
 import { AllocationPanel, EpochCard } from "@/components/warchest/AllocationPanel";
 import { ChestDisclaimer } from "@/components/warchest/ChestDisclaimer";
 import { ChestHero } from "@/components/warchest/ChestHero";
@@ -12,7 +12,7 @@ import { RulesCard } from "@/components/warchest/RulesCard";
 
 export const metadata: Metadata = {
   title: "War Chest",
-  description: `A public treasury on Robinhood Chain: the creator share of $CHMCO trading fees, split by the WW3 index every ${EPOCH_DAYS_DEFAULT} days between neutral humanitarian organizations. Every disbursement verifiable on-chain.`,
+  description: `A public treasury on Robinhood Chain: the creator share of $CHMCO trading fees, split by the WW3 index ${EPOCH_EVERY} between neutral humanitarian organizations. Every disbursement verifiable on-chain.`,
   alternates: { canonical: "/warchest" },
 };
 
