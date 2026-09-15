@@ -1,9 +1,10 @@
+import { EPOCH_DAYS_DEFAULT } from "@/config/epochs";
+
 export const SITE = {
   name: "Schmeckle Wars",
   title: "Schmeckle Wars — WW3 Dashboard | $CHMCO",
   titleTemplate: "%s · Schmeckle Wars",
-  description:
-    "Live WW3 Probability Dashboard. Real conflicts move the index; the index moves the War Chest — a public treasury on Robinhood Chain that funds neutral humanitarian aid every 14 days. $CHMCO.",
+  description: `Live WW3 Probability Dashboard. Real conflicts move the index; the index moves the War Chest — a public treasury on Robinhood Chain that funds neutral humanitarian aid every ${EPOCH_DAYS_DEFAULT} days. $CHMCO.`,
   tagline:
     "The only memecoin backed by human conflict — and the only one that does something about it.",
   motto: "Wars go up. Aid goes out.",
@@ -24,7 +25,7 @@ export const RICK_CHEST_NOTE =
 export const RICK_SPEECH = {
   intro:
     "Listen Morty, *burp* every civilization that achieved interdimensional travel figured out the same thing: war is the one industry that never has a bear market. Every other pathetic memecoin is backed by nothing. $CHMCO is backed by human conflict — and it's the only one that does something about it.",
-  body: "Every trade drops a fee into the War Chest. The War Engine watches every missile, every drone, every red line crossed — and the hotter a theater gets, the bigger its cut. Every 14 days the Chest drops schmeckles on the medics, the deminers and the people handing out bread. Receipts on-chain, because trust is for Jerrys.",
+  body: `Every trade drops a fee into the War Chest. The War Engine watches every missile, every drone, every red line crossed — and the hotter a theater gets, the bigger its cut. Every ${EPOCH_DAYS_DEFAULT} days the Chest drops schmeckles on the medics, the deminers and the people handing out bread. Receipts on-chain, because trust is for Jerrys.`,
   outro: "Wars go up. Aid goes out. That's the whole tokenomics, Morty.",
 } as const;
 
