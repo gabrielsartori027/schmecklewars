@@ -25,9 +25,11 @@ export interface Partner {
 }
 
 /**
- * Seed: ALL `Candidate`. Organizations publicly known to accept crypto donations — verify each
- * one and formalize contact before changing status. Only `Confirmed` partners with a public
- * `confirmationUrl` ever receive funds. Never a government, army, armed group or party to a conflict.
+ * Organizations publicly known to accept crypto donations — each one verified by fetching a
+ * crypto donation page on its OWN domain before changing status. `Confirmed` means that public
+ * channel exists — never that the organization endorses this project. Only `Confirmed` partners
+ * with a public `confirmationUrl` ever receive funds. Never a government, army, armed group or
+ * party to a conflict.
  */
 export const PARTNERS: readonly Partner[] = [
   {
@@ -76,8 +78,16 @@ export const PARTNERS: readonly Partner[] = [
     name: "International Medical Corps",
     theaters: ["MIDDLE_EAST", "EASTERN_FRONT", "GLOBAL"],
     mandate: ["medical"],
-    status: "Candidate",
+    status: "Confirmed",
     website: "https://internationalmedicalcorps.org/",
+    confirmationUrl:
+      "https://internationalmedicalcorps.org/get-involved/other-ways-to-give/donate-cryptocurrency/",
+    receive: {
+      type: "giving-block",
+      url: "https://internationalmedicalcorps.org/get-involved/other-ways-to-give/donate-cryptocurrency/",
+    },
+    notes:
+      "Verified 2026-09-15 on their own domain: a standing public crypto donation page listing 100+ assets (BTC, ETH, USDC, USDT, SOL, DAI), processed through The Giving Block. The page mints a one-time deposit address per donation — there is no static address, so every drop is executed by hand. Confirmed here means this public channel exists and was checked, not that the organization endorses or knows about this project.",
   },
   {
     id: "save-the-children",
