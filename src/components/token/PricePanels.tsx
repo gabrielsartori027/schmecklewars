@@ -1,7 +1,7 @@
 "use client";
 
 import NumberFlow from "@number-flow/react";
-import { EPOCH_DAYS_DEFAULT } from "@/config/epochs";
+import { EPOCH_EVERY } from "@/config/epochs";
 import { RICK_SPEECH } from "@/config/site";
 import { TOKEN } from "@/config/token";
 import { useProjected } from "@/hooks/useProjected";
@@ -153,7 +153,7 @@ export function Tokenomics() {
     ["24h Volume", fmtUsd(d?.volume24h)],
     ["Creator share of fees → War Chest", "100%", "var(--color-aid)"],
     ["Aid / Ops / Reserve", "70 / 20 / 10", "var(--color-aid)"],
-    ["Aid Drop cadence", `every ${EPOCH_DAYS_DEFAULT} days`, "var(--color-aid)"],
+    ["Aid Drop cadence", EPOCH_EVERY, "var(--color-aid)"],
     [
       "Tax",
       "0% — Rick doesn't do taxes. The Chest fills from the creator share of launchpad fees, not from you.",
