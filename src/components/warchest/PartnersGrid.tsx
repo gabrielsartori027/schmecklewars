@@ -50,6 +50,7 @@ function PartnerCard({ p }: { p: Partner }) {
     </li>
   );
 }
+
 export function PartnersGrid() {
   const confirmed = PARTNERS.filter((p) => p.status === "Confirmed" && p.confirmationUrl);
   const others = PARTNERS.filter((p) => !(p.status === "Confirmed" && p.confirmationUrl));
