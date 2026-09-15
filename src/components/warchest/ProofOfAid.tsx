@@ -1,6 +1,6 @@
 "use client";
 
-import { EPOCH_DAYS_DEFAULT } from "@/config/epochs";
+import { EPOCH_LABEL } from "@/config/epochs";
 import { fmtDateUtc } from "@/lib/format";
 import { useWorld } from "@/store/world";
 import { Card, SectionTitle } from "@/components/ui/Card";
@@ -50,7 +50,7 @@ export function ProofOfAid() {
                 <div className="mt-1 text-fg-muted">
                   {when
                     ? `First Aid Drop after Epoch 1 closes on ${when} UTC.`
-                    : `First Aid Drop after Epoch 1 closes (${EPOCH_DAYS_DEFAULT} days after launch).`}{" "}
+                    : `First Aid Drop after Epoch 1 closes (${EPOCH_LABEL} after launch).`}{" "}
                   Each drop will list its legs — Safe → bridge → destination chain → organization —
                   and is marked Verified only when all of them match on-chain.
                 </div>
