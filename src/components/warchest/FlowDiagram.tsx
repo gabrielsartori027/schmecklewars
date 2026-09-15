@@ -1,4 +1,4 @@
-import { EPOCH_DAYS_DEFAULT } from "@/config/epochs";
+import { EPOCH_EVERY } from "@/config/epochs";
 import { Card, SectionTitle } from "@/components/ui/Card";
 
 const STEPS = [
@@ -40,9 +40,9 @@ export function FlowDiagram() {
         ))}
       </ol>
       <p className="mt-3 text-xs text-fg-muted">
-        Every {EPOCH_DAYS_DEFAULT} days an epoch closes: the time-weighted heat share of each
-        theater becomes the split of the aid pool. The multisig executes bridge + donation; each
-        disbursement becomes a Proof of Aid line with all legs verified on-chain.
+        An epoch closes {EPOCH_EVERY}: the time-weighted heat share of each theater becomes the
+        split of the aid pool. The multisig executes bridge + donation; each disbursement becomes a
+        Proof of Aid line with all legs verified on-chain.
       </p>
     </Card>
   );
